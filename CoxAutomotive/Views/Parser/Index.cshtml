@@ -1,0 +1,78 @@
+﻿@model CoxAutomotive.Models.SalesDetails
+
+@{
+    ViewData["Title"] = "Sales Records";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+    var tableDataModel = Model.SalesRecords.First();
+    var tableData = Model.SalesRecords.ToList();
+    var salesMilestones = Model.SalesMilestones;
+    var bestSellingVehicleName = salesMilestones.BestSellingVehicle.vehicleName;
+    var bestSellingVehicleCount = salesMilestones.BestSellingVehicle.totalSales;
+}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="lead">Best Selling Vehicle</h1>
+        <p class="display-4">We have sold @bestSellingVehicleCount, @bestSellingVehicleName s'</p>
+    </div>
+</div>
+
+
+<hr>
+<h1>Sales Records</h1>
+<div class="table-responsive-lg">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(_ => tableDataModel.DealNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(_ => tableDataModel.CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(_ => tableDataModel.DealershipName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(_ => tableDataModel.Vehicle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(_ => tableDataModel.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(_ => tableDataModel.Date)
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in tableData)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DealNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DealershipName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Vehicle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

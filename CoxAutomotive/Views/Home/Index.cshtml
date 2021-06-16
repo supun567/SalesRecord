@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "DealerTrack";
+}
+<script type="text/javascript">
+
+function enableSubmitBtn() {
+    const fileInputElem = document.getElementById("file-input");
+    const submitBtn = document.getElementById("submit-btn");
+    submitBtn.disabled = !fileInputElem.value;
+}
+
+</script>
+<header class="jumbotron jumbotron-fluid">
+    <div class="container-fluid text-center">
+        <h1 class="display-3">DealerTrack - The Best Solution for All Dealers</h1>
+        <p class="lead pb-4">We help you to reach your clients in an easier and efficient way</p>
+        
+    </div>
+</header>
+<div class="container">
+    <form method="post" class="form-inline" enctype="multipart/form-data" asp-controller="Import" asp-action="Index">
+        <div class="form-group col-sm-8">
+            <input type="file" class="form-control-file float-left" name="csvFile" accept=".csv, text/csv" id="file-input" onchange="enableSubmitBtn()">
+        </div>
+        <div>
+            <input type="submit" value="Upload CSV File" id="submit-btn" disabled="disabled"/>
+        </div>
+    </form>
+</div>
