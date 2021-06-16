@@ -1,8 +1,8 @@
-# Software Engineer Interview Coding Challange - Cox Automotive
+# Software Engineer Interview Coding Challange
 ## Supun Kandaudahewa / 2021-06-16
 
 ## Introduction
-This application was developed as to provide a solution to below user story in fullfiling a coding challange for Cox Automotive, Mississauga.
+This application was developed as to provide a solution to below user story in fullfiling a coding challange.
 
 - As a user, I want to be able to upload a CSV file containing vehicle sales data and visualize the data in a web browser. In addition, I would like to display the vehicle that was sold the most often.
 
