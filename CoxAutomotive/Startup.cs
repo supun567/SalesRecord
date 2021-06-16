@@ -47,7 +47,10 @@ namespace CoxAutomotive
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+
+            //disable HTTPS redirection
+            //app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();
