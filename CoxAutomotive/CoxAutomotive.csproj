@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Assests\" />
     <Folder Include="wwwroot\csv\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
