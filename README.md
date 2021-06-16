@@ -21,6 +21,7 @@ In this application the user will upload a CSV file which contains sales records
 - Javascript
 - Bootstrap
 - HTML
+- MSTest Framework
 
 ## Main Objectives
 - Ability to read the CSV file properly.
